@@ -128,6 +128,26 @@ Normalises field values to 0-1 range for analysis.
 fishnet.normalise("fire_frequency", group_by="fire_zone", output_field="fire_freq_norm")
 ```
 
+#### `check_config(config)`
+
+Provides check for common configuration errors and prints a report of issues to console if found.
+
+**Parameters:**
+- `config` (dict): Name configuration dictionary
+
+**Example:**
+```python
+config = {
+    "fieldname": "has_roads",
+    "source": r"C:\Data\roads.shp", 
+    "method": "presence",
+    "match_option": "INTERSECTING"
+}
+# Check for issues in configuration
+fishnet.check_config(config)
+```
+The function will print a short report stating that INTERSECTING isn't a valid match option (should be INTERSECT) etc.
+
 ## Configuration System
 
 The data processing system uses configuration dictionaries to define spatial join operations. Each dataset is processed according to its configuration parameters.
@@ -354,23 +374,11 @@ print(f"Analysis complete. Results saved to: {fishnet.fishnet}")
 
 ### Data Quality
 
-1. **Validate configurations**: The class includes built-in validation (see below) - check error messages
+1. **Validate configurations**: The class includes built-in validation - check error messages
 2. **Handle coordinate systems**: Ensure all datasets use compatible projections
 3. **Check field types**: Verify numeric fields for mathematical operations
 4. **Test with small areas**: Validate workflows on subsets before full processing
 
-### Configuration Validation
-
-```python
-# Example of configuration validation
-def validate_config(name, config):
-    required_fields = ["fieldname", "source", "method"]
-    for field in required_fields:
-        if field not in config:
-            raise ValueError(f"Missing required field '{field}' in {name}")
-    
-    if not arcpy.Exists(config["source"]):
-        raise ValueError(f"Source dataset does not exist: {config['source']}")
 
 # Validate all configurations before processing
 for name, config in data_matrix.items():
