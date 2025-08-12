@@ -20,7 +20,7 @@ It's engine is flexible though and may have other uses, so documentation is prov
 
 ## Overview
 
-The `Fishnet` class automates the creation of the analysis grid and performs complex spatial data processing operations. It's designed for analyzing spatial relationships between different geographic datasets by overlaying them onto a standardized grid system.
+The `Fishnet` class automates the creation of the analysis grid and performs complex spatial data processing operations. It's designed for analysing spatial relationships between different geographic datasets by overlaying them onto a standardised grid system.
 
 ### Key Features
 
