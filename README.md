@@ -15,7 +15,7 @@ It's engine is flexible though and may have other uses, so documentation is prov
 - [Class Reference](#class-reference)
 - [Configuration System](#configuration-system)
 - [Spatial Join Methods](#spatial-join-methods)
-- [Examples](#examples)
+- [Example](#complete-workflow-example)
 - [Best Practices](#best-practices)
 
 ## Overview
