@@ -5,7 +5,7 @@ Arcpy script to generate analysis dataset for fuel breaks
 
 # Fishnet Class Documentation
 The provided script was prepared for a specific purpose - to produce an evaluation dataset for fuel breaks on forested land.
-It's engine is flexible though and may have other uses, so documentation is provided below.
+Its engine is flexible though and may have other uses, so documentation is provided below.
 
 ## Table of Contents
 
