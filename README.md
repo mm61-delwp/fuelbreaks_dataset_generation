@@ -378,9 +378,3 @@ print(f"Analysis complete. Results saved to: {fishnet.fishnet}")
 2. **Handle coordinate systems**: Ensure all datasets use compatible projections
 3. **Check field types**: Verify numeric fields for mathematical operations
 4. **Test with small areas**: Validate workflows on subsets before full processing
-
-
-# Validate all configurations before processing
-for name, config in data_matrix.items():
-    validate_config(name, config)
-```
