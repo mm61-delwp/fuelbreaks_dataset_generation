@@ -349,8 +349,12 @@ study_area = r"C:\Data\region_boundary.shp"
 fishnet.clip_to(study_area)
 
 # Process all datasets
-for dataset_name, config in data_matrix.items():
+for dataset_name, config in data_matrix.items():    
     print(f"Processing {dataset_name}...")
+
+    # validate configuration
+    fishnet.check_config(config)
+
     try:
         fishnet.join_layer(dataset_name, config)
     except Exception as e:
