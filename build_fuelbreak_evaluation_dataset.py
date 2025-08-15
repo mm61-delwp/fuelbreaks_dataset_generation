@@ -153,13 +153,6 @@ data_matrix = {
         "match_option": "HAVE_THEIR_CENTER_IN",
         "filter":       "gridcode = 1"
     },
-        "burnability": {
-        "fieldname":    "burnability",
-        "source":       r"C:\Projects\20250725_StatewideFuelBreaks\spatial_data\Burnability_2024_90m_Point.shp",
-        "method":       "count",
-        "source_field": "gridcode",
-        "match_option": "INTERSECT"
-    },
     "burn_freq": {
         "fieldname":    "burn_freq",
         "source":       r"C:\Projects\20250725_StatewideFuelBreaks\spatial_data\Risk2_gridcell_TimesBurnt_FireFMZ.shp",
